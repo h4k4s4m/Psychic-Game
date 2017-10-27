@@ -1,4 +1,4 @@
-document.getElementById("reset").style.visibility = "hidden";
+$("#reset").css("visibility", "hidden");
 $(document).ready(function () {
     var userKey = '';
     var userLives = 9;
@@ -15,7 +15,7 @@ $(document).ready(function () {
         if (event.key == randomKey) {
             alert("You guessed it! The correct letter was " + event.key);
             userScore++;
-            document.getElementById("reset").style.visibility = "visible";
+            $("#reset").css("visibility", "visible");
             userLives = 9;
             randomKey = charset.charAt(Math.floor(Math.random() * charset.length));
             console.log(randomKey);
@@ -25,7 +25,7 @@ $(document).ready(function () {
             userLives--;
         }
         if (userLives < 1) {
-            document.getElementById("reset").style.visibility = "visible";
+            $("#reset").css("visibility", "visible");
             alert("game over");
             randomKey = charset.charAt(Math.floor(Math.random() * charset.length));
             console.log(randomKey);
@@ -43,6 +43,6 @@ $(document).ready(function () {
         $("#player-score").html(userScore);
         $("#lives-left").html(userLives);
         $("#guesses-made").html(guesses);
-        document.getElementById("reset").style.visibility = "hidden";
+        $("#reset").css("visibility", "hidden");
     })
 });
