@@ -21,6 +21,13 @@ $(document).ready(function () {
         if (userLives < 1) {
             alert("game over");
         }
+
+        $("#player-score").html(userScore);
+        console.log(userScore);
+        $("#lives-left").html(userLives);
+        console.log(userLives);
+        $("#guesses-made").html(guesses);
+        console.log(guesses);
     }
 }
-});
+);
